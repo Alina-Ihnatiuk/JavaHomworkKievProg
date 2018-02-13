@@ -29,6 +29,20 @@ public class Main {
 		System.out.println("Square's side = " + s.getSide());
 		System.out.println("Square's perimeter = " + s.calculatePerimetr());
 		System.out.println("Square's area = " + s.calculateArea());
+		
+		Board b = new Board();
+		
+		System.out.println(b);
+		
+		b.putShape(t, 2);
+		b.putShape(c, 0);
+		b.putShape(s, 3);
+		
+		System.out.println(b);
+		
+		b.delShape(2);
+		
+		System.out.println(b);	
 
 	}
 
