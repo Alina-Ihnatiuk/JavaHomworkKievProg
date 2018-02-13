@@ -14,7 +14,7 @@ public class Main {
 		System.out.println("Point distance 2 = " + pTwo.getDistance(pThree));
 		System.out.println("Point distance 3 = " + pOne.getDistance(pThree));
 
-		Ñircle c = new Ñircle(pOne, pTwo);
+		Circle c = new Circle(pOne, pTwo);
 
 		System.out.println("Circle's perimeter = " + c.calculatePerimetr());
 		System.out.println("Circle's area = " + c.calculateArea());

@@ -1,17 +1,17 @@
 package com.gmail.a.zagorodnia;
 
-public class Ñircle extends Shape {
+public class Circle extends Shape {
 
 	private Point center;
 	private Point circumPoint;
 
-	public Ñircle(Point center, Point circumPoint) {
+	public Circle(Point center, Point circumPoint) {
 		super();
 		this.center = center;
 		this.circumPoint = circumPoint;
 	}
 
-	public Ñircle() {
+	public Circle() {
 		super();
 	}
 
@@ -45,7 +45,7 @@ public class Ñircle extends Shape {
 
 	@Override
 	public String toString() {
-		return "Ñircle [center=" + center + ", circumPoint=" + circumPoint + "]";
+		return "Circle [center=" + center + ", circumPoint=" + circumPoint + "]";
 	}
 
 }
