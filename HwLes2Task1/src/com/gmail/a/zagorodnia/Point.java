@@ -10,7 +10,11 @@ public class Point {
 		this.x = x;
 		this.y = y;
 	}
-
+	
+	public Point() {
+		super();
+	}
+	
 	public double getX() {
 		return x;
 	}

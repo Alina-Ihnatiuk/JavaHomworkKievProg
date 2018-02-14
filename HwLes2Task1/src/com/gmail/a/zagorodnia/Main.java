@@ -40,7 +40,7 @@ public class Main {
 		
 		System.out.println(b);
 		
-		b.delShape(2);
+		b.delShape(3);
 		
 		System.out.println(b);	
 

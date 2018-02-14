@@ -10,18 +10,16 @@ public class Board {
 		super();	
 	}
 
-	public Shape [] putShape (Shape a, int i) {
+	public void putShape (Shape a, int i) {
 		
-		if (arr[i] == null) {
+		if (i >= 0 && i < arr.length && arr[i] == null) {
 			arr[i] = a;
-		}
-		return arr;
+		} 
 	}
-	public Shape [] delShape (int i) {
-		
+	public void delShape (int i) {
+		if (i >= 0 && i < arr.length)  {
 			arr[i] = null;
-		
-		return arr;
+		} 
 	}
 	
 	public double sumArea() {
