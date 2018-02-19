@@ -79,7 +79,7 @@ public class Group {
 
 	@Override
 	public String toString() {
-//		sortGroupBySurname ();
+		sortGroupBySurname ();
 		return "Group [studentsGroupe=" + Arrays.toString(studentsGroupe) + "]";
 	}
 	
