@@ -4,12 +4,15 @@ public class Student extends Human {
 	
 	private Faculty faculty;
 	private double averageScore;
+	private long studentRecordBookNum;
 	
 	
-	public Student(String name, String surname, Gender humansGender, int age, Faculty faculty, double averageScore) {
+	public Student(String name, String surname, Gender humansGender, int age, Faculty faculty, 
+				double averageScore, long studentRecordBookNum) {
 		super(name, surname, humansGender, age);
 		this.faculty = faculty;
 		this.averageScore = averageScore;
+		this.studentRecordBookNum = studentRecordBookNum;
 	}
 
 	public Student() {
@@ -32,11 +35,21 @@ public class Student extends Human {
 		this.averageScore = averageScore;
 	}
 
-	@Override
-	public String toString() {
-		return "Student [" + super.toString() + "faculty=" + faculty + ", averageScore=" + averageScore + "]";
+	public long getStudentRecordBookNum() {
+		return studentRecordBookNum;
 	}
 
+	public void setStudentRecordBookNum(long studentRecordBookNum) {
+		this.studentRecordBookNum = studentRecordBookNum;
+	}
+
+	@Override
+	public String toString() {
+		return "Student [" + super.toString() + "faculty=" + faculty + ", averageScore=" + averageScore + ", studentRecordBookNum="
+				+ studentRecordBookNum + "]";
+	}
+
+	
 	
 	
 	

@@ -1,11 +1,9 @@
 package com.gmail.a.zagorodnia;
 
-import java.util.Arrays;
-
 public class Group {
 
 	private Student[] studentsGroupe = new Student[10];
-	private int numberOfStudentds = 0;
+	private int numberOfStudentds;
 
 	public Group() {
 		super();
@@ -15,15 +13,16 @@ public class Group {
 		return numberOfStudentds;
 	}
 
-	public void addStudent(Student student) {
+	public void addStudent(Student student) throws TooMuchStudentsException  {
 		if (student != null) {
 			for (int i = 0; i <studentsGroupe.length; i++) {
 				if (studentsGroupe[i] == null) {
 					studentsGroupe[i] = student;
 					numberOfStudentds += 1;
-					break;
+					return;
 				}
 			}
+		throw new TooMuchStudentsException();
 		}
 	}
 
@@ -37,9 +36,9 @@ public class Group {
 		return null;
 	}
 	
-	public void delStudent (String surname) {
+	public void delStudent (long studentRecordBookNum) {
 		for (int i = 0; i < studentsGroupe.length; i++) {
-			if (studentsGroupe[i] != null && studentsGroupe[i].getSurname().equalsIgnoreCase(surname)) {
+			if (studentsGroupe[i] != null && studentsGroupe[i].getStudentRecordBookNum() == studentRecordBookNum) {
 				studentsGroupe[i] = null;
 				numberOfStudentds -= 1;
 				break;
@@ -48,13 +47,9 @@ public class Group {
 	}
 	
 	public void sortGroupBySurname () {
-		
 		for (int i = 0; i < studentsGroupe.length; i++) {
-			
 			for (int j= i+1; j < studentsGroupe.length; j++) {
-				
 				if (getIntForSort (studentsGroupe[i], studentsGroupe[j]) > 0) {
-					
 					Student temp = studentsGroupe[i];
 					studentsGroupe[i] = studentsGroupe[j];
 					studentsGroupe[j] = temp;
@@ -64,23 +59,29 @@ public class Group {
 	}
 	
 	private int getIntForSort (Student a, Student b) {
+		if (a == null && b == null) {
+			return 0;
+		}	
 		if (a == null) {
 			return 1;
 		}
 		if (b == null) {
 			return -1;
 		}		
-		if (a == null & b == null) {
-			return 0;
-		}
-		
 		return a.getSurname().compareTo(b.getSurname());
 	}
 
 	@Override
 	public String toString() {
-		sortGroupBySurname ();
-		return "Group [studentsGroupe=" + Arrays.toString(studentsGroupe) + "]";
+		this.sortGroupBySurname();
+        StringBuilder sb = new StringBuilder();
+        for (Student student : studentsGroupe) {
+            if (student != null) {
+                sb.append(student);
+                sb.append(System.lineSeparator());
+            }
+        }
+        return sb.toString();
 	}
 	
 	
