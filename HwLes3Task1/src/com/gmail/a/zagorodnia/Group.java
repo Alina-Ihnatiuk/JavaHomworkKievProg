@@ -15,8 +15,8 @@ public class Group {
 
 	public void addStudent(Student student) throws TooMuchStudentsException  {
 		if (student == null) {
-            throw new IllegalArgumentException("Null student");
-        }
+			throw new IllegalArgumentException("Null student");
+		}
 		for (int i = 0; i <studentsGroupe.length; i++) {
 			if (studentsGroupe[i] == null) {
 				studentsGroupe[i] = student;
@@ -75,14 +75,14 @@ public class Group {
 	@Override
 	public String toString() {
 		this.sortGroupBySurname();
-        StringBuilder sb = new StringBuilder();
-        for (Student student : studentsGroupe) {
-            if (student != null) {
-                sb.append(student);
-                sb.append(System.lineSeparator());
-            }
-        }
-        return sb.toString();
+		StringBuilder sb = new StringBuilder();
+		for (Student student : studentsGroupe) {
+			if (student != null) {
+				sb.append(student);
+				sb.append(System.lineSeparator());
+			}
+		}
+		return sb.toString();
 	}
 	
 	
