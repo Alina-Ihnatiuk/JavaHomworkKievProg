@@ -44,6 +44,12 @@ public class Main {
 		System.out.println(groupOne.getNumberOfStudentds());
 		
 		System.out.println(groupOne);
+		
+		try {
+			groupOne.addStudent(null);
+		} catch (TooMuchStudentsException e) {
+			e.printStackTrace();
+		}
 	}
 	
 

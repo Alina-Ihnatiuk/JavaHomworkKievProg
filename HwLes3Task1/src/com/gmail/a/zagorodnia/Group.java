@@ -14,16 +14,17 @@ public class Group {
 	}
 
 	public void addStudent(Student student) throws TooMuchStudentsException  {
-		if (student != null) {
-			for (int i = 0; i <studentsGroupe.length; i++) {
-				if (studentsGroupe[i] == null) {
-					studentsGroupe[i] = student;
-					numberOfStudentds += 1;
-					return;
-				}
+		if (student == null) {
+            throw new IllegalArgumentException("Null student");
+        }
+		for (int i = 0; i <studentsGroupe.length; i++) {
+			if (studentsGroupe[i] == null) {
+				studentsGroupe[i] = student;
+				numberOfStudentds += 1;
+				return;
 			}
-			throw new TooMuchStudentsException();
 		}
+		throw new TooMuchStudentsException();	
 	}
 
 	public Student searchStudent (String surname) {
