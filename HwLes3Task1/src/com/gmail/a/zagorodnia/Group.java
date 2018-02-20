@@ -22,7 +22,7 @@ public class Group {
 					return;
 				}
 			}
-		throw new TooMuchStudentsException();
+			throw new TooMuchStudentsException();
 		}
 	}
 
