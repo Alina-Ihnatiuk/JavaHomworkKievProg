@@ -136,8 +136,9 @@ public class Group implements Voenkom {
 	}
 	
 	public void sortWithParameters(SortType sortType) {
-        Arrays.sort(studentsGroupe, new StudentsComparator(sortType));
-    }
+
+		Arrays.sort(studentsGroupe, new StudentsComparator(sortType));
+	}
 	
 
 	@Override
