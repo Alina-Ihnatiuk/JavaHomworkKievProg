@@ -1,6 +1,6 @@
 package com.gmail.a.zagorodnia;
 
-public class Student extends Human {
+public class Student extends Human implements Comparable {
 	
 	private Faculty faculty;
 	private double averageScore;
@@ -16,7 +16,7 @@ public class Student extends Human {
 	}
 
 	public Student() {
-		
+	
 	}
 
 	public Faculty getFaculty() {
@@ -42,6 +42,15 @@ public class Student extends Human {
 	public void setStudentRecordBookNum(long studentRecordBookNum) {
 		this.studentRecordBookNum = studentRecordBookNum;
 	}
+				
+	@Override
+	public int compareTo(Object o) {
+		
+		Student anotherStudent = (Student) o;
+			
+		return this.getSurname().compareTo(anotherStudent.getSurname()); 
+				
+	}	
 
 	@Override
 	public String toString() {
