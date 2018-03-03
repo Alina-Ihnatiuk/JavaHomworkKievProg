@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		MyFileFilter mFF = new MyFileFilter("pdf");
+		MyFileFilter mFF = new MyFileFilter("docx");
 		
 		File folder = new File("D:/MyFolder");
 		
