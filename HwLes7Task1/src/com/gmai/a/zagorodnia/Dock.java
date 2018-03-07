@@ -3,7 +3,7 @@ package com.gmai.a.zagorodnia;
 public class Dock {
 	
 	private String name;
-	Ship ship;
+	private Ship ship;
 	
 
 	public Dock(String name) {
