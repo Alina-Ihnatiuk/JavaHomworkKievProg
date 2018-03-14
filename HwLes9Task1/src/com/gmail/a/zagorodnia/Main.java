@@ -8,7 +8,6 @@ public class Main {
 	public static void main(String[] args) {
 		
 		listOperation();
-
 	}
 
 	public static void listOperation() {
@@ -18,10 +17,8 @@ public class Main {
 			myList.add(String.format("%." + (i+2) + "f", Math.PI));
 		}  
 		myList.remove(0);
-        myList.remove(0);
-        myList.remove(myList.size() - 1);
-        System.out.println(myList);
-		
-		
+		myList.remove(0);
+		myList.remove(myList.size() - 1);
+		System.out.println(myList);			
 	}
 }
