@@ -1,0 +1,13 @@
+teacher - вчитель
+I - я
+you - Ви
+task - завдання
+it - це
+correctly - вірно
+meen - значити
+good - гарний
+were - були
+made - зробити
+if - якщо
+that - що
+Thanks! - Дякую!
