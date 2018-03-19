@@ -101,7 +101,9 @@ public class MyDictionary {
 
 	@Override
 	public String toString() {
-		return "Dictionary{" + "words=" + dictionary + '}';
+		return "MyDictionary{" + "words=" + dictionary + '}';
 	}
+
+	
 
 }
