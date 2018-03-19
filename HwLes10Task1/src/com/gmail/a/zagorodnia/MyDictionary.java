@@ -28,7 +28,7 @@ public class MyDictionary {
 		return dictionary;
 	}
 
-	public static List<String> fileToStrings(File file) throws IOException {
+	public List<String> fileToStrings(File file) throws IOException {
 		List<String> linesList = new ArrayList<>();
 		try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
 			String s;
@@ -39,7 +39,7 @@ public class MyDictionary {
 		return linesList;
 	}
 
-	public static void stringsToFile(List<String> list, File file) throws FileNotFoundException {
+	public void stringsToFile(List<String> list, File file) throws FileNotFoundException {
 		if (list == null) {
 			throw new IllegalArgumentException();
 		}
@@ -50,7 +50,7 @@ public class MyDictionary {
 		}
 	}
 
-	public static Map<String, String> listToMap(List<String> list) {
+	public Map<String, String> listToMap(List<String> list) {
 		Map<String, String> map = new HashMap<>();
 		for (String line : list) {
 			map.put(line.split(" - ")[0], line.split(" - ")[1]);
@@ -92,7 +92,7 @@ public class MyDictionary {
 		this.addToDictionaryFile(inEnglish + " - " + inUkrainian, file);
 	}
 
-	private void addToDictionaryFile(String line, File file) throws IOException {
+	public void addToDictionaryFile(String line, File file) throws IOException {
 		try (BufferedWriter bf = new BufferedWriter(new FileWriter(file, true))) {
 			bf.write(System.lineSeparator());
 			bf.write(line);	

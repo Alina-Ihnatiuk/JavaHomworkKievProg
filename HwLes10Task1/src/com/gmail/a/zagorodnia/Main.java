@@ -23,8 +23,7 @@ public class Main {
             myDictionary.translateFile(in, out);
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        
+        }    
         
 	}
 
